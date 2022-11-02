@@ -19,4 +19,8 @@ describe('zodiac routes', () => {
       'symbol': 'Water Bearer'
     });
   });
+  it('returns horoscope for /horoscopes/leo', async () => {
+    const resp = await request(app).get('/horoscopes/leo');
+    expect(resp.text).toEqual('narcissist');
+  });
 });
